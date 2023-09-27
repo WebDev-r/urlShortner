@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const server = require('../model/model');
-mongoose.connect("mongodb+srv://js8322870:nkRS1cjqniQgzv9w@cluster0.35d7raj.mongodb.net/urlShortner")
+mongoose.connect(process.env.MONGODB)
 async function getCount(req,resp){
     console.log(req.query)
         const id=req.query.id;
