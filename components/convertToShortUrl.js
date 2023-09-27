@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const server= require('../model/model');
-mongoose.connect("mongodb+srv://js8322870:nkRS1cjqniQgzv9w@cluster0.35d7raj.mongodb.net/urlShortner")
+mongoose.connect(process.env.MONGODB)
 async function converToShortUrl(req,resp){
         const url=req.body.url;
         const shortUrl=await server.findOne({url:url})
