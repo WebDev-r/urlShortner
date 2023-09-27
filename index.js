@@ -1,7 +1,7 @@
 const express=require('express');
 const app=express();
 const urlShortner = require('./routes/routes');
-const port=3000||PORT
+const port=3000||process.env.PORT
 const cors=require('cors')
 app.use(cors())
 app.use(express.json())
