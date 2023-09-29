@@ -10,7 +10,7 @@ async function converToShortUrl(req,resp){
                   id=count;
             })
                  await server.create({url:url,count:0,id:id})
-                 resp.json({created:true,shortUrl:`${req.hostname}/?id=${id}`,count:0})
+                 resp.json({created:true,shortUrl:`${req.hostname}/url/?id=${id}`,count:0})
         }
         else{
               resp.json({created:false,shortUrl:`${req.hostname}/url/?id=${shortUrl.id}`,count:shortUrl.count})
