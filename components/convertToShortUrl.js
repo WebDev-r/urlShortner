@@ -13,7 +13,7 @@ async function converToShortUrl(req,resp){
                  resp.json({created:true,shortUrl:`${req.hostname}/?id=${id}`,count:0})
         }
         else{
-              resp.json({created:false,shortUrl:`${req.hostname}/?id=${shortUrl.id}`,count:shortUrl.count})
+              resp.json({created:false,shortUrl:`${req.hostname}/url/?id=${shortUrl.id}`,count:shortUrl.count})
         }
 }
 module.exports=converToShortUrl
