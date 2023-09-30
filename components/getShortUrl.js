@@ -11,7 +11,7 @@ async function getShortUrl(req,resp){
         }
         else{
             await server.updateOne({id:id},{count:shortUrl.count+1})
-            resp.redirect(`https://${shortUrl.url}`)
+            resp.download(`https://${shortUrl.url}`,()=>{console.log("file downloded"},(err)=>{console.log(err)});
         }
 }
 module.exports=getShortUrl;
