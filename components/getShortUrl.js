@@ -11,7 +11,7 @@ async function getShortUrl(req,resp){
         }
         else{
             await server.updateOne({id:id},{count:shortUrl.count+1})
-          resp.redirect(`https://${shortUrl.url}`)
+          resp.redirect(`${shortUrl.url}`)
         }
 }
 module.exports=getShortUrl;
